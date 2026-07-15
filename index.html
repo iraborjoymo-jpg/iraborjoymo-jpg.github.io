@@ -26,12 +26,12 @@
       --bg-card: #ffffff;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: #111; background: #f5f2ef; line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; color: #111; background: #fff; line-height: 1.6; }
     a { color: inherit; }
-    .site { max-width: 960px; margin: 0 auto; background: #fff; box-shadow: 0 0 40px rgba(0,0,0,0.08); }
+    .site { width: 100%; background: #fff; }
 
     /* ── NAV ── */
-    nav { background: var(--dark); display: flex; align-items: center; justify-content: space-between; padding: 1rem 2.5rem; position: sticky; top: 0; z-index: 100; }
+    nav { background: var(--dark); display: flex; align-items: center; justify-content: space-between; padding: 1rem 6%; position: sticky; top: 0; z-index: 100; }
     .nav-logo { color: #fff; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; }
     .nav-logo span { color: var(--brown-light); }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
@@ -39,7 +39,7 @@
     .nav-links a:hover { color: var(--brown-light); }
 
     /* ── HERO ── */
-    .hero { background: var(--dark); padding: 4rem 2.5rem 3.5rem; }
+    .hero { background: var(--dark); padding: 5rem 8% 4rem; }
     .hero-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--brown-light); font-weight: 600; margin-bottom: 1rem; }
     .hero h1 { font-size: 60px; font-weight: 800; color: #fff; line-height: 1.05; margin-bottom: 0.5rem; }
     .hero-tagline { font-size: 15px; color: #999; font-style: italic; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
@@ -54,12 +54,12 @@
     .linkedin-badge svg { width: 15px; height: 15px; fill: #fff; flex-shrink: 0; }
 
     /* ── STATS BANNER ── */
-    .banner { background: var(--brown-bg); padding: 1.25rem 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .banner { background: var(--brown-bg); padding: 1.25rem 8%; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
     .banner-item { color: rgba(255,255,255,0.92); font-size: 13px; display: flex; align-items: center; gap: 7px; font-weight: 500; }
     .banner-item i { font-size: 16px; }
 
     /* ── SECTIONS ── */
-    section { padding: 3rem 2.5rem; border-bottom: 1px solid var(--border); }
+    section { padding: 3.5rem 8%; border-bottom: 1px solid var(--border); }
     .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brown); font-weight: 700; margin-bottom: 5px; }
     .section-title { font-size: 24px; font-weight: 700; margin-bottom: 1.75rem; color: #111; }
 
@@ -107,11 +107,37 @@
     .why-item i { font-size: 22px; color: var(--brown); flex-shrink: 0; }
     .why-item span { font-size: 14px; font-weight: 600; color: #222; }
 
+    /* ── WORK SAMPLES ── */
+    .samples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .sample-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow 0.2s, border-color 0.2s; }
+    .sample-card:hover { border-color: var(--brown); box-shadow: 0 4px 20px rgba(160,98,42,0.12); }
+    .sample-cat { background: var(--brown-bg); padding: 0.6rem 1.25rem; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; }
+    .sample-body { padding: 1.25rem; }
+    .sample-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #111; }
+    .sample-body p { font-size: 13px; color: #666; line-height: 1.65; margin-bottom: 1rem; }
+    .sample-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--brown); text-decoration: none; border: 1.5px solid var(--brown); border-radius: 6px; padding: 6px 14px; transition: background 0.2s, color 0.2s; }
+    .sample-link:hover { background: var(--brown); color: #fff; }
+    .sample-link i { font-size: 15px; }
+    .sample-note { background: #fff8f2; border: 1px dashed var(--brown-light); border-radius: 8px; padding: 0.75rem 1rem; font-size: 12px; color: #8a5020; margin-top: 1.5rem; display: flex; align-items: center; gap: 8px; }
+
     /* ── CERT ── */
     .cert-box { background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem; }
     .cert-box i { font-size: 40px; color: #c0940a; flex-shrink: 0; }
     .cert-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
     .cert-box p { font-size: 13px; color: #666; line-height: 1.65; }
+
+    /* ── WORK SAMPLES ── */
+    .work-category { margin-bottom: 2.5rem; }
+    .work-category:last-child { margin-bottom: 0; }
+    .work-category-title { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--brown); display: inline-block; }
+    .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .work-card { border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; background: #fff; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .work-card:hover { border-color: var(--brown); box-shadow: 0 4px 16px rgba(160,98,42,0.1); }
+    .work-card h4 { font-size: 14px; font-weight: 700; color: #111; }
+    .work-card p { font-size: 13px; color: #666; line-height: 1.6; flex: 1; }
+    .work-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--brown); text-decoration: none; margin-top: 4px; }
+    .work-link:hover { color: var(--brown-light); }
+    .work-link i { font-size: 14px; }
 
     /* ── TESTIMONIALS ── */
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
@@ -130,7 +156,7 @@
     .faq-icon.open { transform: rotate(180deg); }
 
     /* ── CONTACT ── */
-    .contact-wrap { background: var(--dark); border-radius: 14px; padding: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .contact-wrap { background: var(--dark); border-radius: 14px; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .contact-info h3 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 8px; }
     .contact-info p { font-size: 14px; color: #aaa; line-height: 1.75; margin-bottom: 1.5rem; }
     .crow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
@@ -146,14 +172,14 @@
 
 
     /* ── FOOTER ── */
-    footer { background: var(--dark); padding: 2rem 2.5rem; text-align: center; }
+    footer { background: var(--dark); padding: 2rem 8%; text-align: center; }
     footer p { font-size: 13px; color: #555; }
     footer strong { color: var(--brown-light); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       nav { padding: 0.75rem 1.25rem; }
-      .hero { padding: 2.5rem 1.25rem 2rem; }
+      .hero { padding: 2.5rem 4% 2rem; }
       .hero h1 { font-size: 40px; }
       section { padding: 2.25rem 1.25rem; }
       .about-grid, .contact-wrap { grid-template-columns: 1fr; }
@@ -169,7 +195,7 @@
     <div class="nav-logo">Joy<span> Irabor</span></div>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#work">Process</a></li>
+      <li><a href="#samples">Work Samples</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -386,6 +412,137 @@
     </div>
   </section>
 
+  <!-- WORK SAMPLES -->
+  <section id="samples">
+    <div class="section-label">Proof of work</div>
+    <div class="section-title">Work Samples</div>
+
+    <div class="samples-grid">
+
+      <!-- Executive Support -->
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-calendar"></i> Executive Support</div>
+        <div class="sample-body">
+          <h3>Complex Calendar Management</h3>
+          <p>End-to-end management of cross-functional and multi-timezone schedules for founders and CEOs. Reduced scheduling conflicts by 95%.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1oEJfqrSrRRoA2p0AWXPSMl-2fdqstTsb/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-plane"></i> Travel & Logistics</div>
+        <div class="sample-body">
+          <h3>Global Mobility & Travel Logistics</h3>
+          <p>Complete handling of complex international and domestic travel itineraries, lodging, and local meeting logistics across shifting time zones.</p>
+          <a class="sample-link" href="https://docs.google.com/presentation/d/1ZCXmOo8r6aoSRQtHZLYp5hS32VedeoUj/edit?usp=sharing&ouid=111467518753966027870&rtpof=true&sd=true" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-receipt"></i> Financial Admin</div>
+        <div class="sample-body">
+          <h3>Financial Oversight & Administration</h3>
+          <p>Preparing, tracking, and submitting precise expense reports and managing reimbursements for corporate executives and boards of trustees.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1Y4ojXl_ZHPabjfKWmIbKUVnac_YmCQ6d/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-users"></i> Executive Liaison</div>
+        <div class="sample-body">
+          <h3>Executive Liaison & Gatekeeping</h3>
+          <p>Serving as a trusted, professional primary point of contact for external partners, institutional stakeholders, and internal administrative teams.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1vQBNLR2ro30JrjwFj6M5cPpY3zsWIrVC/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <!-- Project Management -->
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-chart-gantt"></i> Project Management</div>
+        <div class="sample-body">
+          <h3>Milestone & Lifecycle Tracking</h3>
+          <p>Translating high-level executive visions into actionable 90-day milestone trackers and agile project execution plans.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/12hyEgw2ku0gfs3EahDShHCpFzsnALPua/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-settings"></i> Operations</div>
+        <div class="sample-body">
+          <h3>Operational Workflow Optimization</h3>
+          <p>Designing and maintaining customized project tracking systems via ClickUp and Trello to drive team accountability.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/19zZf9kOHUxTri4ex_fQipbr_IEvxNKBz/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-cloud"></i> Cloud & Knowledge</div>
+        <div class="sample-body">
+          <h3>Cloud Infrastructure & Asset Management</h3>
+          <p>Auditing and restructuring cloud-based file architecture using Google Drive and Dropbox to optimize document recovery times.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/17MwUJ3j4t1nAff2gbvbcg_PvzwI74TeG/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-calendar-event"></i> Events</div>
+        <div class="sample-body">
+          <h3>Event Project Architecture</h3>
+          <p>Coordinating logistics for business events, virtual summits, and in-person corporate gatherings — including venue sourcing and catering.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1Uk-6VNjaHX5uKxgFSpuFr5vNuhoI5J1N/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <!-- Inbox & Communication -->
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-inbox"></i> Inbox Strategy</div>
+        <div class="sample-body">
+          <h3>Inbox Engineering</h3>
+          <p>Managing high-volume corporate communication pipelines — 100+ daily client emails with a 95% first-touch resolution rate.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1LVWGUNf5hmO-XZJoMEaory_6bPKRWelm/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-mail"></i> Correspondence</div>
+        <div class="sample-body">
+          <h3>Executive Correspondence</h3>
+          <p>Drafting emails, thought-leadership content, investor updates, meeting agendas, and formal executive summaries — saving up to 40% of the CEO's operational bandwidth.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/11g0dMPHF8eLhoDCv0lRLIOmMbo3g7Q0H/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-database"></i> Lead Generation</div>
+        <div class="sample-body">
+          <h3>High-Intent Lead Generation</h3>
+          <p>Building clean, validated B2B pipeline databases of 100+ prospective leads via targeted market research and strict data verification.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/13Xe_wwwFWlgLW7eQs0nwNq6nah0uQaWw/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <!-- Graphics -->
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-palette"></i> Graphics Design</div>
+        <div class="sample-body">
+          <h3>Logos, Flyers & Social Media Graphics</h3>
+          <p>Branded social media graphics, business cards, flyers, rate cards, and carousel posts — including work for Aura Event Group and ProEdge Academy.</p>
+          <a class="sample-link" href="https://drive.google.com/file/d/1MvDi1aYBzDnnQaVOuNQO2KEwdEJz9WYQ/view?usp=sharing" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+      <div class="sample-card">
+        <div class="sample-cat"><i class="ti ti-presentation"></i> Presentations</div>
+        <div class="sample-body">
+          <h3>Presentation Slides & Proposals</h3>
+          <p>Executive presentation decks, research slide designs, hiring partnership proposals, and business profiles built to impress.</p>
+          <a class="sample-link" href="https://docs.google.com/presentation/d/13Ogde2HJvbH6EKJ55ovz7FBSqFrk9FFd/edit?usp=sharing&ouid=111467518753966027870&rtpof=true&sd=true" target="_blank"><i class="ti ti-external-link"></i> View Sample</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CERTIFICATION -->
   <section id="cert">
     <div class="section-label">Credentials</div>
@@ -480,13 +637,13 @@
           </a>
         </div>
       </div>
-      <div class="contact-form">
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <input type="text" placeholder="Subject" />
-        <textarea placeholder="Tell me about your project or what you need help with…"></textarea>
-        <button class="btn-primary" style="align-self:flex-start; padding:11px 28px;" onclick="alert('Message sent! Joy will get back to you within 24 hours.')">Send Message</button>
-      </div>
+      <form class="contact-form" action="https://formspree.io/f/mwvgvlqj" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Tell me about your project or what you need help with…" required></textarea>
+        <button type="submit" class="btn-primary" style="align-self:flex-start; padding:11px 28px;">Send Message</button>
+      </form>
     </div>
   </section>
 
